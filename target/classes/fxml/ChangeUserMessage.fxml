@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox id="stage" prefHeight="720.0" prefWidth="1142.0" style="-fx-border-color: #9c9c9c;-fx-background-color: white" stylesheets="/css/ChangeUserLoad.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ChangeUserMessageController">
+    <children>
+      <HBox id="top" maxHeight="-Infinity" prefHeight="73.0" prefWidth="1140.0" style="-fx-background-color: #b4b4b4" VBox.vgrow="ALWAYS">
+         <children>
+            <HBox prefHeight="21.0" prefWidth="1140.0" HBox.hgrow="ALWAYS" />
+             <JFXButton fx:id="sx" onAction="#sxAction" prefHeight="23.0" prefWidth="25.0" ripplerFill="#b4b4b4" style="-fx-background-radius: 0;" text="-" textFill="#aba2a2" HBox.hgrow="ALWAYS">
+                 <HBox.margin>
+                     <Insets />
+                 </HBox.margin>
+             </JFXButton>
+             <JFXButton id="gb" fx:id="gb" contentDisplay="RIGHT" onAction="#closeAction" prefHeight="14.0" prefWidth="25.0" ripplerFill="WHITE" style="-fx-background-radius: 0;" text="x" textFill="#aba2a2" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+        <HBox id="top" alignment="CENTER" layoutY="3.0" prefHeight="741.0" prefWidth="1140.0" style="-fx-background-color: #ffffff;" VBox.vgrow="ALWAYS">
+            <children>
+                <VBox fx:id="person" prefHeight="486.0" prefWidth="1140.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <HBox maxHeight="-Infinity" minHeight="25.0" prefHeight="25.0" prefWidth="1124.0">
+                            <children>
+                                <HBox maxHeight="-Infinity" minHeight="25.0" prefHeight="25.0" prefWidth="508.0" HBox.hgrow="ALWAYS" />
+                                <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="个人中心" textAlignment="CENTER" wrappingWidth="117.240234375" />
+                                    </children>
+                                </HBox>
+                                <HBox maxHeight="-Infinity" minHeight="25.0" prefHeight="25.0" prefWidth="507.0" HBox.hgrow="ALWAYS" />
+                            </children>
+                        </HBox>
+
+                        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="730.0" prefWidth="1262.0" style="-fx-background-color: white" VBox.vgrow="ALWAYS">
+                            <children>
+                                <HBox prefHeight="705.0" prefWidth="1124.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                            <children>
+                                                <VBox maxHeight="-Infinity" prefHeight="13.0" prefWidth="100.0" VBox.vgrow="ALWAYS" />
+                                                <VBox alignment="CENTER" maxHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" />
+                                                <VBox prefHeight="200.0" prefWidth="81.0" VBox.vgrow="ALWAYS" />
+                                            </children>
+                                        </VBox>
+                                        <VBox alignment="CENTER_LEFT" prefHeight="705.0" prefWidth="579.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <VBox prefHeight="150.0" prefWidth="574.0" />
+                                                <VBox prefHeight="171.0" prefWidth="574.0">
+                                                    <children>
+                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                            <children>
+                                                                <Text layoutX="105.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="姓名" textAlignment="RIGHT" wrappingWidth="54.0">
+                                                                    <font>
+                                                                        <Font size="18.0" />
+                                                                    </font>
+                                                                </Text>
+                                                                <TextField fx:id="name" layoutX="184.0" layoutY="17.0" prefHeight="30.0" prefWidth="217.0" promptText="必填" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="168.0" prefWidth="574.0">
+                                                    <children>
+                                                        <AnchorPane prefHeight="200.0" prefWidth="584.0">
+                                                            <children>
+                                                                <Text layoutX="105.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="性别" textAlignment="RIGHT" wrappingWidth="54.0">
+                                                                    <font>
+                                                                        <Font size="18.0" />
+                                                                    </font>
+                                                                </Text>
+                                                                <RadioButton fx:id="man" layoutX="212.0" layoutY="21.0" mnemonicParsing="false" text="男" />
+                                                                <RadioButton fx:id="woman" layoutX="333.0" layoutY="21.0" mnemonicParsing="false" text="女" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </children>
+                                                </VBox>
+                                                <VBox prefHeight="171.0" prefWidth="574.0">
+                                                    <children>
+                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                            <children>
+                                                                <Text layoutX="105.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="年龄" textAlignment="RIGHT" wrappingWidth="54.0">
+                                                                    <font>
+                                                                        <Font size="18.0" />
+                                                                    </font>
+                                                                </Text>
+                                                                <TextField fx:id="age" layoutX="184.0" layoutY="17.0" prefHeight="30.0" prefWidth="216.0" promptText="填写出生年月后按回车系统自动填写" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </children>
+                                                </VBox>
+                                                <VBox prefHeight="168.0" prefWidth="574.0">
+                                                    <children>
+                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                            <children>
+                                                                <Text layoutX="87.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="出生年月" textAlignment="RIGHT" wrappingWidth="74.0">
+                                                                    <font>
+                                                                        <Font size="18.0" />
+                                                                    </font>
+                                                                </Text>
+                                                                <DatePicker fx:id="birthday" layoutX="184.0" layoutY="15.0" onAction="#birthday" prefHeight="30.0" prefWidth="217.0" promptText="必填 格式xxxx-xx-xx" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </children>
+                                                </VBox>
+                                                <VBox prefHeight="158.0" prefWidth="574.0">
+                                                    <children>
+                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                            <children>
+                                                                <Text layoutX="86.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="民族" textAlignment="RIGHT" wrappingWidth="74.0">
+                                                                    <font>
+                                                                        <Font size="18.0" />
+                                                                    </font>
+                                                                </Text>
+                                                                <TextField fx:id="minzu" layoutX="184.0" layoutY="10.0" prefHeight="30.0" prefWidth="217.0" promptText="必填" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </children>
+                                                </VBox>
+                                                <VBox prefHeight="172.0" prefWidth="574.0">
+                                                    <children>
+                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                            <children>
+                                                                <Text layoutX="89.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="联系号码" textAlignment="RIGHT" wrappingWidth="74.0">
+                                                                    <font>
+                                                                        <Font size="18.0" />
+                                                                    </font>
+                                                                </Text>
+                                                                <TextField fx:id="tel" layoutX="184.0" layoutY="17.0" prefHeight="30.0" prefWidth="216.0" promptText="必填" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </children>
+                                                </VBox>
+                                                <VBox prefHeight="165.0" prefWidth="574.0">
+                                                    <children>
+                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                            <children>
+                                                                <Text layoutX="89.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QQ号码" textAlignment="RIGHT" wrappingWidth="74.0">
+                                                                    <font>
+                                                                        <Font size="18.0" />
+                                                                    </font>
+                                                                </Text>
+                                                                <TextField fx:id="qqnumber" layoutX="184.0" layoutY="14.0" prefHeight="30.0" prefWidth="217.0" promptText="可选填" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </children>
+                                                </VBox>
+                                                <VBox prefHeight="153.0" prefWidth="574.0">
+                                                    <children>
+                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                            <children>
+                                                                <Text layoutX="90.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="微信号码" textAlignment="RIGHT" wrappingWidth="74.0">
+                                                                    <font>
+                                                                        <Font size="18.0" />
+                                                                    </font>
+                                                                </Text>
+                                                                <TextField fx:id="weixin" layoutX="184.0" layoutY="8.0" prefHeight="30.0" prefWidth="217.0" promptText="可选填" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                                            <children>
+                                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                                                            </children>
+                                                        </HBox>
+                                                    </children>
+                                                </VBox>
+                                                <VBox prefHeight="162.0" prefWidth="574.0">
+                                                    <children>
+                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                            <children>
+                                                                <Text layoutX="90.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="邮箱" textAlignment="RIGHT" wrappingWidth="74.0">
+                                                                    <font>
+                                                                        <Font size="18.0" />
+                                                                    </font>
+                                                                </Text>
+                                                                <TextField fx:id="email" layoutX="184.0" layoutY="13.0" prefHeight="30.0" prefWidth="217.0" promptText="可选填" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </children>
+                                                </VBox>
+                                                <VBox prefHeight="160.0" prefWidth="574.0">
+                                                    <children>
+                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                            <children>
+                                                                <Text layoutX="72.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="身份证号码" textAlignment="RIGHT" wrappingWidth="92.0">
+                                                                    <font>
+                                                                        <Font size="18.0" />
+                                                                    </font>
+                                                                </Text>
+                                                                <TextField fx:id="idcard" layoutX="184.0" layoutY="12.0" prefHeight="30.0" prefWidth="217.0" promptText="必填" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </children>
+                                                </VBox>
+                                                <VBox prefHeight="200.0" prefWidth="574.0" />
+                                            </children>
+                                        </VBox>
+                                        <VBox prefHeight="705.0" prefWidth="435.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <VBox alignment="CENTER" prefHeight="362.0" prefWidth="430.0">
+                                                    <children>
+                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                            <children>
+                                                                <ImageView fx:id="touxiang" fitHeight="164.0" fitWidth="131.0" layoutX="155.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </children>
+                                                </VBox>
+                                                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                                                    <children>
+                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                            <children>
+                                                                <JFXButton fx:id="shangchuan" layoutX="168.0" layoutY="-1.0" managed="false" onAction="#shangchuan" prefHeight="30.0" prefWidth="104.0" ripplerFill="WHITE" style="-fx-background-color: #42cf5b" text="上传头像" textFill="WHITE" visible="false" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="194.0" prefWidth="430.0">
+                                                    <children>
+                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                            <children>
+                                                                <JFXButton layoutX="93.0" layoutY="48.0" onAction="#xiugai" prefHeight="54.0" prefWidth="254.0" style="-fx-background-color: #42cf5b" text="修改个人信息" textFill="WHITE" fx:id="xiugai">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                                </JFXButton>
+                                                                <JFXButton fx:id="quxiaoxiugai" layoutX="80.0" layoutY="38.0" managed="false" onAction="#quxiaoxiugai" prefHeight="39.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #42cf5b" text="取消修改" textFill="WHITE" visible="false" />
+                                                                <JFXButton fx:id="querenxiugai" layoutX="232.0" layoutY="38.0" managed="false" onAction="#querenxiugai" prefHeight="39.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #42cf5b" text="确认修改" textFill="WHITE" visible="false" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </children>
+                                                </VBox>
+                                                <VBox prefHeight="70.0" prefWidth="440.0" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+
+    </children>
+        </HBox>
+    </children>
+</VBox>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace代表这个*mapper.xml文件指向哪个接口-->
+<mapper namespace="dao.UserDao">
+    <!--select表示查询,它的id名称必须与DAO层接口的方法名相同,否则无法绑定-->
+    <!-- statement，内容：sql语句。id：唯一标识，随便写，在同一个命名空间下保持唯一
+       resultType：sql语句查询结果集的封装类型,tb_user即为数据库中的表
+     -->
+    <!-- resultMap标签:映射实体与表
+           type属性：表示实体全路径名
+           id属性：为实体与表的映射取一个任意的唯一的名字
+      -->
+    <!--    <resultMap type="dao.UserLoad" id="id">-->
+    <!--        &lt;!&ndash; id标签:映射主键属性-->
+    <!--             result标签：映射非主键属性-->
+    <!--             property属性:实体的属性名-->
+    <!--             column属性：表的字段名-->
+    <!--        &ndash;&gt;-->
+    <!--        <id property="id" column="id"/>-->
+    <!--        <result property="username" column="username"/>-->
+    <!--        <result property="password" column="password"/>-->
+    <!--    </resultMap>-->
+    <!--select表示查询,它的id名称必须与DAO层接口的方法名相同,否则无法绑定-->
+    <!--  通过用户名来进行唯一查找  -->
+    <select id="getUserList"  resultType="dao.UserLoad">
+        select * from userload
+    </select>
+
+    <!--    LIKE 模糊搜索-->
+<!--    LIKE CONCAT('%',#{keyword},'%')-->
+
+    <select id="selectLikeUsername" parameterType= "string" resultType="dao.UserLoad">
+        select * from userload where username like CONCAT('%',#{username},'%')
+    </select>
+
+    <select id="selectByUsername" parameterType= "string" resultType="dao.UserLoad">
+        select * from userload where username = #{username}
+    </select>
+
+    <select id = "selectByAdmin" parameterType="Integer" resultType="dao.UserLoad">
+        select * from userload where admin = #{admin}
+    </select>
+
+    <select id = "selectByRegistrationdate" parameterType="Date" resultType="dao.UserLoad">
+        select * from userload where registrationdate = #{registrationdate}
+    </select>
+    <!-- 删除用户登录账号 -->
+    <delete id="deleteUserLoad" parameterType="string" >
+        DELETE FROM userload WHERE username = #{username}
+    </delete>
+    <update id="updateUserLoad" parameterType="dao.UserLoad" >
+        update userload SET password=#{password},admin=#{admin},telphone=#{telphone},email=#{email} where username=#{username}
+    </update>
+
+    <update id="updateothers" parameterType="dao.UserLoad" >
+        update userload SET email=#{email},telphone=#{telphone} where username=#{username}
+    </update>
+
+    <update id="updatePassword" parameterType="dao.UserLoad" >
+        update userload SET password=#{password} where username=#{username}
+    </update>
+
+    <insert id="insertUserLoad" parameterType="dao.UserLoad" useGeneratedKeys="true" keyProperty="id">
+        insert into userload (username, password, admin, registrationdate,telphone) values (#{username}, #{password}, #{admin}, #{registrationdate,jdbcType=TIMESTAMP}, #{telphone})
+    </insert>
+
+
+</mapper>
+
+

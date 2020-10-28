@@ -1,0 +1,37 @@
+/*例子：分别是默认   经过   按下*/
+/*#entryButton{*/
+/*    -fx-background-color: green;*/
+/*}*/
+
+/*#entryButto:hover{*/
+/*    -fx-background-color: blue;*/
+/*}*/
+
+/*#entryButton:pressed{*/
+/*    -fx-background-color: red;*/
+/*}*/
+
+
+#zhuce{
+    -fx-background-color: white;
+}
+#zhuce:pressed{
+    -fx-background-color: white;
+}
+#gb{
+    -fx-text-fill: #aba2a2;
+
+}
+#gb:hover{
+    -fx-background-color: #ff4d3b;
+    -fx-text-fill: white;
+}
+
+#sx{
+    fx-background-color: #aba2a2;
+    -fx-text-fill: #aba2a2;
+}
+#sx:hover{
+    -fx-background-color: #8b8b8b;
+    -fx-text-fill: white;
+}

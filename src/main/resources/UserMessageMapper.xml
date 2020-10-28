@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace代表这个*mapper.xml文件指向哪个接口-->
+<mapper namespace="dao.UserMessageDao">
+
+    <select id="getUserMessageList"  resultType="dao.UserMessage">
+        select * from usermessage
+    </select>
+
+    <select id="selectByKey"  resultType="dao.UserMessage">
+        select * from usermessage  where username =#{username} or name = #{name} or departname = #{departname}
+    </select>
+
+    <select id="selectUserMessageByName"  resultType="dao.UserMessage">
+        select * from usermessage  where name = #{name}
+    </select>
+
+    <select id="selectUserMessage" parameterType= "string" resultType="dao.UserMessage">
+        select * from usermessage where username = #{username}
+    </select>
+
+    <insert id="insertUserMessage" parameterType="dao.UserMessage" useGeneratedKeys="true" keyProperty="id">
+        insert into usermessage (username,name, sex, age,birthday,minzu,departname,qqnumber,weixin,idcard,touxiangurl) values (#{username}, #{name}, #{sex}, #{age}, #{birthday,jdbcType=TIMESTAMP},  #{minzu},  #{departname},#{qqnumber}, #{weixin}, #{idcard},#{touxiangurl})
+    </insert>
+
+    <update id="updateUserMessage" parameterType="dao.UserMessage" >
+        update usermessage SET name=#{name},sex=#{sex},touxiangurl=#{touxiangurl},age=#{age},birthday=#{birthday,jdbcType=TIMESTAMP},minzu=#{minzu},qqnumber=#{qqnumber},weixin=#{weixin},idcard=#{idcard} where username=#{username}
+    </update>
+
+<!--    <update id="updateUserTelANDEmail" parameterType="dao.UserMessage" >-->
+<!--        update usermessage SET tel=#{tel},qqnumber=#{qqnumber},email=#{email} where username=#{username}-->
+<!--    </update>-->
+
+    <delete id="deleteUserMessage" parameterType="string" >
+        DELETE FROM usermessage WHERE username = #{username}
+    </delete>
+</mapper>

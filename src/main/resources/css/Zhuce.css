@@ -1,0 +1,61 @@
+/*例子：分别是默认   经过   按下*/
+/*#entryButton{*/
+/*    -fx-background-color: green;*/
+/*}*/
+
+/*#entryButto:hover{*/
+/*    -fx-background-color: blue;*/
+/*}*/
+
+/*#entryButton:pressed{*/
+/*    -fx-background-color: red;*/
+/*}*/
+
+#biaoti{
+
+}
+
+#tishi1{
+    -fx-text-fill: red;
+
+}
+#tishi2{
+    -fx-text-fill: red;
+
+}
+#tishi3{
+    -fx-text-fill: red;
+
+}
+#tishi4{
+    -fx-text-fill: red;
+}
+#username{
+    -fx-text-fill: #b7b7b7;
+
+}
+#username:focused{
+    -fx-text-fill: #000000;
+}
+
+#gb{
+    -fx-text-fill: #aba2a2;
+
+}
+#gb:hover{
+    -fx-background-color: #ff4d3b;
+    -fx-text-fill: white;
+}
+
+#sx{
+    fx-background-color: #aba2a2;
+    -fx-text-fill: #aba2a2;
+}
+#sx:hover{
+    -fx-background-color: #8b8b8b;
+    -fx-text-fill: white;
+}
+#quxiao{
+    -fx-background-color: #cbcbcb;
+}
+

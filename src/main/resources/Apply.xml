@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace代表这个*mapper.xml文件指向哪个接口-->
+<mapper namespace="dao.ApplicationsDao">
+
+    <select id="getApplyList" resultType="dao.Application">
+        select * from application
+    </select>
+
+    <select id="SelectByDate" resultType="dao.Application">
+        select * from application where applicationDate = #{applicationDate}
+    </select>
+
+    <select id="selectByUsername" resultType="dao.Application">
+        select * from application where employeeID = #{employeeID}
+    </select>
+
+    <!-- 精确到日 搜索(个人)-->
+    <select id="selectByDate" parameterType= "string" resultType="dao.Application">
+        select * from application where employeeID = #{employeeID} and applicationDate =#{applicationDate}
+    </select>
+
+    <!--个人用户搜索某个月的，暂时用不上-->
+    <select id="PersonSelectByKey" parameterType= "string" resultType="dao.Application">
+        select * from application where employeeID=#{employeeID} and applicationDate like CONCAT('%',#{applicationDate},'%')
+    </select>
+
+    <select id="AdminSelectByKey" parameterType= "string" resultType="dao.Application">
+        select * from application where employeeID=#{employeeID} or applicationDate like CONCAT('%',#{applicationDate},'%')
+    </select>
+
+    <insert id="insertHuanBanApply" parameterType="dao.Application" useGeneratedKeys="true" keyProperty="id">
+        insert into application (applicationDate, applicationType, applicationStatus, employeeID,startDate,endDate,origindutyID,finishdutyID,applicationReason,employedID ) values (#{applicationDate}, #{applicationType}, #{applicationStatus}, #{employeeID},#{startDate},#{endDate},#{origindutyID},#{finishdutyID},#{applicationReason},#{employedID})
+    </insert>
+
+    <!-- 删除申请记录 -->
+    <delete id="deleteSQ" parameterType="string" >
+        DELETE FROM application WHERE employeeID = #{employeeID} and applicationDate = #{applicationDate}
+    </delete>
+    <update id="updateStatus" parameterType="dao.Application" >
+        update application SET applicationStatus = #{applicationStatus},auditDate = #{auditDate},auditor = #{auditor} where id = #{id}
+    </update>
+
+</mapper>

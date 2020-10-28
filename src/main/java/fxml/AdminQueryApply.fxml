@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="562.0" prefHeight="768.0" prefWidth="1280.0" style="-fx-border-color: #777777" stylesheets="/css/Index.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminQueryApplyController">
+   <children>
+
+      <HBox id="top" prefHeight="13.0" prefWidth="1280.0" style="-fx-background-color: #ffffff">
+         <children>
+            <JFXButton alignment="TOP_LEFT" disable="true" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="23.0" prefWidth="1283.0" text="医院药房智能排班系统" HBox.hgrow="ALWAYS" />
+            <JFXButton fx:id="sx" alignment="CENTER" onAction="#sxAction" prefHeight="23.0" prefWidth="31.0" ripplerFill="WHITE" style="-fx-background-radius: 0;" text="-" textFill="#aba2a2" HBox.hgrow="ALWAYS" />
+
+            <JFXButton id="gb" fx:id="gb" alignment="CENTER" onAction="#closeAction" prefHeight="14.0" prefWidth="31.0" ripplerFill="WHITE" style="-fx-background-radius: 0;" text="x" textFill="#aba2a2" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+
+      <!--换班详情-->
+      <VBox fx:id="HuanBan" managed="false" visible="false" prefHeight="730.0" prefWidth="1149.0" HBox.hgrow="ALWAYS">
+         <children>
+            <HBox maxHeight="-Infinity" minHeight="25.0" prefHeight="25.0" prefWidth="1124.0">
+               <children>
+                  <HBox maxHeight="-Infinity" minHeight="25.0" prefHeight="25.0" prefWidth="508.0" HBox.hgrow="ALWAYS" />
+                  <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="换班详情" textAlignment="CENTER" wrappingWidth="117.240234375" />
+                     </children>
+                  </HBox>
+                  <HBox maxHeight="-Infinity" minHeight="25.0" prefHeight="25.0" prefWidth="507.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+
+            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="730.0" prefWidth="1262.0" style="-fx-background-color: white" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox prefHeight="705.0" prefWidth="1124.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <VBox maxHeight="-Infinity" prefHeight="13.0" prefWidth="100.0" VBox.vgrow="ALWAYS" />
+                              <VBox alignment="CENTER" maxHeight="-Infinity" prefHeight="30.0" prefWidth="100.0">
+                                 <children>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="81.0" VBox.vgrow="ALWAYS" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <TextArea fx:id="reason" editable="false" layoutX="115.0" layoutY="408.0" prefHeight="142.0" prefWidth="634.0" promptText="换班事由">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextArea>
+                                    <Text layoutX="115.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="申请人" wrappingWidth="54.00001525878906">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="applyname" editable="false" layoutX="169.0" layoutY="89.0" prefHeight="23.0" prefWidth="141.0" />
+                                    <Text layoutX="447.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="被换班人" wrappingWidth="67.00000762939453">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="applyname2" editable="false" layoutX="515.0" layoutY="89.0" prefHeight="23.0" prefWidth="141.0" />
+                                    <Text layoutX="115.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="原班次" wrappingWidth="54.00001525878906">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="447.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="现换班次" wrappingWidth="67.00001001358032">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="time2" editable="false" layoutX="514.0" layoutY="165.0" prefHeight="23.0" prefWidth="141.0" />
+                                    <TextField fx:id="time1" editable="false" layoutX="169.0" layoutY="165.0" prefHeight="23.0" prefWidth="141.0" />
+                                    <TextField fx:id="banci1" editable="false" layoutX="318.0" layoutY="165.0" prefHeight="23.0" prefWidth="67.0" />
+                                    <TextField fx:id="banci2" editable="false" layoutX="664.0" layoutY="165.0" prefHeight="23.0" prefWidth="67.0" />
+                                    <Text layoutX="105.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="申请日期" wrappingWidth="73.9999771118164">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="time3" editable="false" layoutX="169.0" layoutY="249.0" prefHeight="23.0" prefWidth="216.0" />
+                                    <Text layoutX="447.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="审核状态" wrappingWidth="67.00000762939453">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="shenheZT" editable="false" layoutX="515.0" layoutY="249.0" prefHeight="23.0" prefWidth="67.0" />
+                                    <Text layoutX="596.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="审核人" wrappingWidth="54.00001525878906">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="shenheName" editable="false" layoutX="650.0" layoutY="249.0" prefHeight="23.0" prefWidth="83.0" />
+                                    <Text layoutX="105.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="审核日期" wrappingWidth="73.9999771118164">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="time4" editable="false" layoutX="169.0" layoutY="338.0" prefHeight="23.0" prefWidth="216.0" />
+                                    <JFXButton fx:id="HBBUTONGGUO" layoutX="749.0" layoutY="44.0" onAction="#HBBUTONGGUO" style="-fx-background-color: #09a6ff" text="不通过" textFill="aliceblue" />
+                                    <JFXButton fx:id="HBTAONGGUO" layoutX="820.0" layoutY="44.0" onAction="#HBTAONGGUO" prefHeight="23.0" prefWidth="52.0" style="-fx-background-color: #09a6ff" text="通过" textFill="aliceblue" />
+                                    <TextField fx:id="name1" editable="false" layoutX="318.0" layoutY="89.0" prefHeight="23.0" prefWidth="67.0" />
+                                    <TextField fx:id="name2" editable="false" layoutX="664.0" layoutY="89.0" prefHeight="23.0" prefWidth="67.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="175.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+
+      <!--请假详情-->
+      <VBox fx:id="QingJia" managed="false" visible="false" prefHeight="730.0" prefWidth="1149.0" HBox.hgrow="ALWAYS">
+         <children>
+            <HBox maxHeight="-Infinity" minHeight="25.0" prefHeight="25.0" prefWidth="1124.0">
+               <children>
+                  <HBox maxHeight="-Infinity" minHeight="25.0" prefHeight="25.0" prefWidth="508.0" HBox.hgrow="ALWAYS" />
+                  <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="25.0" prefHeight="25.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="请假详情" textAlignment="CENTER" wrappingWidth="117.240234375" />
+                     </children>
+                  </HBox>
+                  <HBox maxHeight="-Infinity" minHeight="25.0" prefHeight="25.0" prefWidth="507.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="730.0" prefWidth="1262.0" style="-fx-background-color: white" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox prefHeight="705.0" prefWidth="1124.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <VBox maxHeight="-Infinity" prefHeight="13.0" prefWidth="100.0" VBox.vgrow="ALWAYS" />
+                              <VBox alignment="CENTER" maxHeight="-Infinity" prefHeight="30.0" prefWidth="100.0">
+                                 <children>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="81.0" VBox.vgrow="ALWAYS" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Text layoutX="118.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="申请人" wrappingWidth="54.00001525878906">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="Qapplyname" editable="false" layoutX="172.0" layoutY="104.0" prefHeight="23.0" prefWidth="170" />
+                                    <TextField fx:id="name3" editable="false" layoutX="346" layoutY="104.0" prefHeight="23.0" prefWidth="70" />
+                                    <Text layoutX="108.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="开始时间" wrappingWidth="66.99999809265137">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="367.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="结束时间" wrappingWidth="67.00001001358032">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="Qtime2" editable="false" layoutX="434.0" layoutY="180.0" prefHeight="23.0" prefWidth="164.0" />
+                                    <TextField fx:id="Qtime1" editable="false" layoutX="175.0" layoutY="180.0" prefHeight="23.0" prefWidth="178.0" />
+                                    <TextField fx:id="Qsum" editable="false" layoutX="644.0" layoutY="180.0" prefHeight="23.0" prefWidth="67.0" />
+                                    <Text layoutX="434.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="申请日期" wrappingWidth="73.9999771118164">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="Qtime3" editable="false" layoutX="516.0" layoutY="104.0" prefHeight="23.0" prefWidth="216.0" />
+                                    <Text layoutX="416.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="审核状态" wrappingWidth="67.00000762939453">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="QshenheZT" editable="false" layoutX="492.0" layoutY="264.0" prefHeight="23.0" prefWidth="83.0" />
+                                    <Text layoutX="581.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="审核人" wrappingWidth="54.00001525878906">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="QshenheName" editable="false" layoutX="636.0" layoutY="264.0" prefHeight="23.0" prefWidth="83.0" />
+                                    <Text layoutX="105.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="审核日期" wrappingWidth="73.9999771118164">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="Qtime4" editable="false" layoutX="179.0" layoutY="264.0" prefHeight="23.0" prefWidth="216.0" />
+                                    <Text layoutX="608.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="总计" wrappingWidth="35.99998474121094">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="716.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="天" wrappingWidth="35.99998474121094">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <TextArea fx:id="Qreason" editable="false" layoutX="118.0" layoutY="423.0" prefHeight="142.0" prefWidth="634.0" promptText="请假事由">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextArea>
+                                 </children>
+                                 <JFXButton fx:id="QJBUTONGGUO" layoutX="749.0" layoutY="44.0" onAction="#QJBUTONGGUO" style="-fx-background-color: #09a6ff" text="不通过" textFill="aliceblue" />
+                                 <JFXButton fx:id="QJTAONGGUO" layoutX="820.0" layoutY="44.0" onAction="#QJTAONGGUO" prefHeight="23.0" prefWidth="52.0" style="-fx-background-color: #09a6ff" text="通过" textFill="aliceblue" />
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+
+
+
+   </children>
+</VBox>

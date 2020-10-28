@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="stage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="300.0" style="-fx-background-radius: 0;-fx-border-color: #a9a9a9;-fx-background-color: white;" stylesheets="/css/Main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <HBox id="top" fx:id="top" prefHeight="23.0" prefWidth="300.0">
+         <children>
+            <JFXButton id="biaoti" fx:id="biaoti" alignment="TOP_LEFT" prefHeight="23.0" prefWidth="295.0" text="医院药房人员管理系统" HBox.hgrow="ALWAYS" />
+            <JFXButton fx:id="sx" onAction="#sxAction" prefHeight="23.0" prefWidth="25.0" ripplerFill="WHITE" style="-fx-background-radius: 0;" text="-" textFill="#aba2a2" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton id="gb" fx:id="gb" contentDisplay="RIGHT" onAction="#closeAction" prefHeight="14.0" prefWidth="25.0" ripplerFill="WHITE" style="-fx-background-radius: 0;" text="x" textFill="#aba2a2" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+
+            <JFXTextField id="username" fx:id="username" focusColor="#5ebcf7" layoutX="39.0" layoutY="101.0" prefHeight="23.0" prefWidth="223.0" promptText="用户名" unFocusColor="#b1b1b1" />
+      <JFXPasswordField id="password" fx:id="password" focusColor="#5ebcf7" layoutX="39.0" layoutY="174.0" prefHeight="23.0" prefWidth="223.0" promptText="密码" unFocusColor="#b2b2b2" />
+      <JFXCheckBox id="jzmm" fx:id="jzmm" layoutX="43.0" layoutY="239.0" text="记住密码" />
+      <JFXButton fx:id="dl" defaultButton="true" layoutX="42.0" layoutY="286.0" onAction="#denglu" prefHeight="39.0" prefWidth="223.0" ripplerFill="#56a878" style="-fx-background-color: #69cf94;" text="登录" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="wjmm" layoutX="164.0" layoutY="237.0" onAction="#wjmm" prefHeight="23.0" prefWidth="66.0" ripplerFill="WHITE" text="忘记密码" textFill="#0c83eb" />
+      <JFXButton id="zhuce" fx:id="zhuce" layoutX="230.0" layoutY="237.0" onAction="#zhuce" prefHeight="23.0" prefWidth="42.0" ripplerFill="WHITE" text="注册" textFill="#0c83eb" />
+<!--      <JFXButton id="zhuce2" fx:id="zhuce2" layoutX="230.0" layoutY="257.0" onAction="#zhuce2" prefHeight="23.0" prefWidth="42.0" ripplerFill="WHITE" text="注册" textFill="#0c83eb" />-->
+   </children>
+</AnchorPane>

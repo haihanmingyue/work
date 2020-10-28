@@ -1,0 +1,68 @@
+/*例子：分别是默认   经过   按下*/
+/*#entryButton{*/
+/*    -fx-background-color: green;*/
+/*}*/
+
+/*#entryButto:hover{*/
+/*    -fx-background-color: blue;*/
+/*}*/
+
+/*#entryButton:pressed{*/
+/*    -fx-background-color: red;*/
+/*}*/
+
+
+#cxgrxx,#cxpbb,#xjsq,#ChangePassword,#zx,#GeneralButton{
+    -fx-text-fill: #eeeeee;
+}
+
+#chakan{
+    -fx-text-fill:#FFFFFF;
+    -fx-font-size: 20;
+    -fx-font-family:"Microsoft YaHei UI Light";
+    -fx-background-color: rgb(0, 170, 202);
+    -fx-border-color: rgb(0, 170, 202);
+    -fx-border-radius: 50;
+    -fx-background-radius: 20;
+    -fx-pref-width: 180px;
+    -fx-pref-height: 70px;
+    -fx-padding: 6 6 6 6;
+}
+
+#shenqing{
+    -fx-text-fill:#FFFFFF;
+    -fx-font-size: 20;
+    -fx-font-family:"Microsoft YaHei UI Light";
+    -fx-background-color: rgb(0, 170, 202);
+    -fx-border-color: rgb(0, 170, 202);
+    -fx-border-radius: 50;
+    -fx-background-radius: 20;
+    -fx-pref-width: 180px;
+    -fx-pref-height: 70px;
+    -fx-padding: 6 6 6 6;
+}
+#gb{
+     -fx-text-fill: #aba2a2;
+
+ }
+#gb:hover{
+    -fx-background-color: #ff4d3b;
+    -fx-text-fill: white;
+}
+
+#sx{
+    fx-background-color: #aba2a2;
+    -fx-text-fill: #aba2a2;
+}
+#sx:hover{
+    -fx-background-color: #8b8b8b;
+    -fx-text-fill: white;
+}
+#fd{
+    fx-background-color: #aba2a2;
+    -fx-text-fill: #aba2a2;
+}
+#fd:hover{
+    -fx-background-color: #8b8b8b;
+    -fx-text-fill: white;
+ }

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="312.0" style="-fx-background-radius: 0; -fx-background-color: white; -fx-border-color: #aba2a2;" stylesheets="/css/Zhuce.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterController">
+   <children>
+      <HBox id="top" alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="312.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="248.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="账号注册">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <JFXButton fx:id="sx" onAction="#sxAction" prefHeight="23.0" prefWidth="25.0" ripplerFill="WHITE" style="-fx-background-radius: 0;" text="-" textFill="#aba2a2" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></JFXButton>
+            <JFXButton id="gb" fx:id="gb" contentDisplay="RIGHT" onAction="#closeAction" prefHeight="23.0" prefWidth="12.0" ripplerFill="WHITE" style="-fx-background-radius: 0;" text="x" textFill="#aba2a2" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+
+      <JFXTextField id="username" fx:id="username" focusColor="#5ebcf7" layoutX="46.0" layoutY="57.0" prefHeight="23.0" prefWidth="220.0" promptText="用户名" unFocusColor="#b2b2b2" />
+      <JFXPasswordField id="password" fx:id="password" focusColor="#5ebcf7" layoutX="46.0" layoutY="110.0" prefHeight="23.0" prefWidth="220.0" promptText="8-16位密码" unFocusColor="#b2b2b2" />
+      <JFXPasswordField id="password1" fx:id="password1" focusColor="#5ebcf7" layoutX="46.0" layoutY="162.0" prefHeight="23.0" prefWidth="220.0" promptText="再次输入密码" unFocusColor="#b2b2b2" />
+      <JFXTextField id="yzm1" fx:id="yzm1" focusColor="#5ebcf7" layoutX="46.0" layoutY="220.0" prefHeight="23.0" prefWidth="99.0" promptText="输入验证码" unFocusColor="#b1b1b1" />
+      <ImageView id="yzm" fx:id="yzm" fitHeight="37.0" fitWidth="106.0" layoutX="164.0" layoutY="213.0" onMouseClicked="#shuaxin" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton id="zhuce" fx:id="zhuce" defaultButton="true" layoutX="183.0" layoutY="282.0" onAction="#zhuce" prefHeight="37.0" prefWidth="99.0" ripplerFill="WHITE" style="-fx-background-color: #2fa875;" text="注册" textAlignment="CENTER" textFill="WHITE" />
+      <JFXButton id="quxiao" fx:id="quxiao" layoutX="38.0" layoutY="282.0" onAction="#quxiao" prefHeight="37.0" prefWidth="99.0" ripplerFill="#00daff" style="-fx-background-color: #078ecf;" text="取消" textAlignment="CENTER" textFill="WHITE" />
+   </children>
+</AnchorPane>

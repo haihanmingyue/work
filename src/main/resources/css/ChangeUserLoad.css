@@ -1,0 +1,34 @@
+/*例子：分别是默认   经过   按下*/
+/*#entryButton{*/
+/*    -fx-background-color: green;*/
+/*}*/
+
+/*#entryButto:hover{*/
+/*    -fx-background-color: blue;*/
+/*}*/
+
+/*#entryButton:pressed{*/
+/*    -fx-background-color: red;*/
+/*}*/
+
+
+
+#gb{
+    -fx-text-fill: #848484;
+    -fx-background-radius: 0;
+}
+#gb:hover{
+    -fx-background-color: #ff4d3b;
+    -fx-text-fill: white;
+
+}
+
+#sx{
+
+    -fx-text-fill: #848484;
+    -fx-background-radius: 0;
+}
+#sx:hover{
+    -fx-background-color: #515151;
+    -fx-text-fill: white;
+}

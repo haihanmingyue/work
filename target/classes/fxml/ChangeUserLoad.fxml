@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox id="stage" prefHeight="566.0" prefWidth="445.0" style="-fx-border-color: #9c9c9c;-fx-background-color: white" stylesheets="/css/ChangeUserLoad.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ChangeUserLoadController">
+    <children>
+        <HBox id="top" alignment="CENTER" layoutY="3.0" prefHeight="23.0" prefWidth="445.0" style="-fx-background-color: #ffffff;">
+            <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="869.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text fx:id="biaoti" strokeType="OUTSIDE" strokeWidth="0.0" text="添加账号" wrappingWidth="51.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="23.0" prefWidth="445.0" style="-fx-background-color: #ffffff;" HBox.hgrow="ALWAYS">
+               <children>
+                      <JFXButton id="sx" fx:id="sx" onAction="#sxAction" prefHeight="23.0" prefWidth="25.0" ripplerFill="WHITE" text="-">
+                          <HBox.margin>
+                              <Insets />
+                          </HBox.margin>
+                  </JFXButton>
+                      <JFXButton id="gb" fx:id="gb" contentDisplay="RIGHT" onAction="#closeAction" prefHeight="14.0" prefWidth="46.0" ripplerFill="WHITE" text="x" />
+               </children>
+            </HBox>
+            </children>
+      </HBox>
+      <AnchorPane prefHeight="553.0" prefWidth="443.0">
+         <children>
+            <Text fx:id="usname1" fill="#0000008d" layoutX="86.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="账号" wrappingWidth="48.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="paword1" fill="#0000008c" layoutX="86.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="密码">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="tel1" fill="#0000008c" layoutX="84.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="联系号码">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="email1" fill="#0000008c" layoutX="86.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="邮箱">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+      
+                              <JFXTextField fx:id="username" focusColor="#8ca7f8" layoutX="86.0" layoutY="102.0" prefHeight="23.0" prefWidth="271.0" unFocusColor="#939393" />
+            <JFXPasswordField fx:id="password" focusColor="#8ca7f8" layoutX="86.0" layoutY="176.0" prefHeight="23.0" prefWidth="271.0" unFocusColor="#939393" />
+            <JFXTextField fx:id="tel" focusColor="#8ca7f8" layoutX="86.0" layoutY="248.0" prefHeight="23.0" prefWidth="271.0" unFocusColor="#939393" />
+            <JFXTextField fx:id="email" focusColor="#8ca7f8" layoutX="86.0" layoutY="311.0" prefHeight="23.0" prefWidth="271.0" unFocusColor="#939393" />
+            <JFXToggleButton fx:id="admin" layoutX="39.0" layoutY="341.0" onAction="#admin" prefHeight="58.0" prefWidth="191.0" text="ToggleButton" toggleColor="#007e9c" toggleLineColor="#03b1d3" />
+            <JFXButton fx:id="adduser" defaultButton="true" layoutX="86.0" layoutY="425.0" onAction="#adduser" prefHeight="44.0" prefWidth="271.0" style="-fx-background-color: #007e9c;" text="添加账号" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft YaHei" size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+    </children>
+</VBox>

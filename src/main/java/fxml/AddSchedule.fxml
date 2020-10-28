@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox id="stage" prefHeight="440.0" prefWidth="332.0" style="-fx-border-color: #9c9c9c;-fx-background-color: white" stylesheets="/css/ChangeUserLoad.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddScheduleController">
+    <children>
+        <HBox id="top" alignment="CENTER" layoutY="3.0" prefHeight="23.0" prefWidth="445.0" style="-fx-background-color: #ffffff;">
+            <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="869.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text fx:id="biaoti" strokeType="OUTSIDE" strokeWidth="0.0" text="添加排班信息" wrappingWidth="97.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="23.0" prefWidth="445.0" style="-fx-background-color: #ffffff;" HBox.hgrow="ALWAYS">
+               <children>
+                      <JFXButton id="sx" fx:id="sx" onAction="#sxAction" prefHeight="23.0" prefWidth="25.0" ripplerFill="WHITE" text="-">
+                          <HBox.margin>
+                              <Insets />
+                          </HBox.margin>
+                  </JFXButton>
+                      <JFXButton id="gb" fx:id="gb" contentDisplay="RIGHT" onAction="#closeAction" prefHeight="14.0" prefWidth="46.0" ripplerFill="WHITE" text="x" />
+               </children>
+            </HBox>
+            </children>
+      </HBox>
+      <AnchorPane prefHeight="553.0" prefWidth="443.0">
+         <children>
+            <JFXButton fx:id="addSchedule" defaultButton="true" layoutX="35.0" layoutY="322.0" onAction="#addSchedule" prefHeight="35.0" prefWidth="261.0" style="-fx-background-color: #007e9c;" text="添加排班" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft YaHei" size="15.0" />
+               </font>
+            </JFXButton>
+            <TextField fx:id="username" layoutX="34.0" layoutY="65.0" onAction="#username" prefHeight="23.0" prefWidth="193.0" promptText="输入职工用户名后，按回车键" />
+            <TextField fx:id="name" editable="false" layoutX="234.0" layoutY="65.0" prefHeight="23.0" prefWidth="63.0" />
+            <JFXDatePicker fx:id="DatePick" layoutX="39.0" layoutY="148.0" onAction="#DatePick" prefHeight="23.0" prefWidth="193.0" promptText="请选择日期" />
+            <TextField fx:id="BanCiYesOrNo" editable="false" layoutX="234.0" layoutY="148.0" prefHeight="23.0" prefWidth="63.0" />
+            <MenuButton fx:id="ChoiceBanCi" layoutX="39.0" layoutY="233.0" mnemonicParsing="false"  prefHeight="23.0" prefWidth="182.0" text="请选择班次" />
+            <TextField fx:id="BanCi" editable="false" layoutX="234.0" layoutY="233.0" prefHeight="23.0" prefWidth="63.0" />
+         </children>
+      </AnchorPane>
+    </children>
+</VBox>

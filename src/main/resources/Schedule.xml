@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace代表这个*mapper.xml文件指向哪个接口-->
+<mapper namespace="dao.ScheduleDao">
+
+    <select id="getAllSchedule"  resultType="dao.Schedule">
+        select * from schedule
+    </select>
+
+    <select id="getScheduleList"  resultType="dao.Schedule">
+        select * from schedule where date like CONCAT('%',#{date},'%')
+    </select>
+
+
+    <select id="getScheduleListByKey"  resultType="dao.Schedule">
+        select * from schedule where employeeID like CONCAT('%',#{employeeID},'%') or dutyID like CONCAT('%',#{dutyID},'%') or date like CONCAT('%',#{date},'%')
+    </select>
+
+    <select id="selectByUsername"  resultType="dao.Schedule">
+        select * from schedule
+        where employeeID = #{employeeID} and date like CONCAT('%',#{date},'%')
+    </select>
+
+    <select id="PersonSelectByDate"  parameterType="String" resultType="dao.Schedule">
+        select * from schedule where employeeID = #{employeeID} and date = #{date}
+    </select>
+
+    <update id="updateSchedule" parameterType="dao.Schedule" >
+        update schedule SET dutyID=#{dutyID},date = #{date} where employeeID = #{employeeID}
+    </update>
+
+    <update id="updateScheduleDayAndDuty" parameterType="dao.Schedule" >
+        update schedule SET dutyID=#{dutyID},date = #{date} where id=#{id}
+    </update>
+
+    <update id="updateScheduleDuty" parameterType="dao.Schedule" >
+        update schedule SET dutyID=#{dutyID} where employeeID = #{employeeID} and date = #{date}
+    </update>
+
+    <update id="updateScheduleMan" parameterType="dao.Schedule" >
+        update schedule SET employeeID=#{employeeID} where id=#{id}
+    </update>
+
+    <update id="updateScheduleIDManDate" parameterType="dao.Schedule" >
+        update schedule SET employeeID=#{employeeID},dutyID = #{dutyID},date = #{date} where id=#{id}
+    </update>
+
+    <insert id="insertSchedule" parameterType="dao.Schedule" useGeneratedKeys="true" keyProperty="id">
+        insert into schedule (employeeID, dutyID, date) values (#{employeeID}, #{dutyID}, #{date})
+    </insert>
+
+    <insert id="insertScheduleList" parameterType="dao.Schedule" useGeneratedKeys="true" keyProperty="id">
+        insert into schedule (employeeID, dutyID, date) values
+        <foreach collection="SchList" item="sch" separator=",">
+        (#{sch.employeeID}, #{sch.dutyID}, #{sch.date})
+        </foreach>
+    </insert>
+
+    <delete id="deleteSchedule"  parameterType="dao.Schedule" >
+        DELETE FROM schedule WHERE employeeID = #{employeeID} and date = #{date}
+    </delete>
+
+
+</mapper>
